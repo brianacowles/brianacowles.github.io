@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<script>
+//Changes color on scroll and adds border
+function changeCss () {
+      var bodyElement = document.querySelector(".menu");
+      this.scrollY > 300 ? bodyElement.style.background = "#c5afe8" : bodyElement.style.background = "whitesmoke";
+      this.scrollY > 300 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
+    }
+window.addEventListener("scroll", changeCss , false);
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 100) {
+            $(".menu").addClass("scrolled");
+        } else {
+            $(".menu").removeClass("scrolled");
+        }
+    });
+});
+</script>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="personal%20website.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+        <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+        <title>Briana E. Cowles</title>
+        <html lang="en">
+    </head>
+    <body>
+        <header></header>
+        
+        <div class="menu">
+            <li style="float:left"> <a href="home.html">HOME</a></li>
+            <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/briana-cowles-b437a4138"><i style="font-size: 1.25em;" class="fab fa-linkedin-in"></i></a></li>
+            <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="downloads.html">DOWNLOADS</a></li>
+        </div>
+        
+        <div class="parallax">        
+            <img class="logo" alt="pastel code" src="media/logo.png">
+        </div>
+
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id lacus facilisis, mollis ipsum vitae, feugiat quam. Praesent sit amet ligula sed sem sagittis sodales. Vestibulum luctus ipsum nibh, nec facilisis purus vestibulum a. Donec aliquet mollis massa et suscipit. Quisque tincidunt nulla eget arcu maximus malesuada in at magna. Praesent mollis sem et dolor volutpat viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sodales placerat convallis. Vestibulum consequat sed lacus sagittis maximus. Quisque laoreet justo purus, vel fringilla urna egestas vitae. Mauris malesuada lectus nec sagittis congue.
+
+Aliquam erat volutpat. Morbi nec egestas diam. Aliquam pellentesque sed velit pulvinar placerat. Pellentesque vel arcu eu felis vestibulum faucibus ac sed dui. Suspendisse potenti. Integer quis leo consectetur, tincidunt sapien a, molestie ante. Praesent leo dui, tincidunt non mauris sed, pretium faucibus odio. Vivamus enim justo, faucibus quis condimentum ac, posuere vitae tellus. Ut quam magna, rhoncus at tortor at, vestibulum sagittis nunc. Aliquam ut massa sit amet nisl dictum porttitor at vel mi. Etiam mollis semper nisl, scelerisque lacinia tellus finibus eu. Aenean maximus ullamcorper odio, at imperdiet metus eleifend non.
+
+Praesent ultricies porta augue vel pulvinar. Sed facilisis euismod lectus, sed porta metus sollicitudin nec. Suspendisse egestas maximus maximus. Nunc euismod risus vitae congue molestie. Sed ut lacus ac velit convallis consequat. Donec sem elit, iaculis nec erat nec, lacinia faucibus nulla. Etiam lorem lacus, faucibus et quam congue, dapibus euismod nibh. In nec elit mollis nulla dapibus posuere eget ut dolor. Maecenas nec tortor mi. Donec ipsum elit, tempus eu sodales ut, euismod tempor lacus. Ut vitae ornare sem. Donec tincidunt nisl ac lacinia pretium. Integer eget rhoncus mi, eget laoreet ante. Ut ut massa sit amet ipsum fringilla scelerisque sed euismod est.
+
+Nulla leo tortor, dictum maximus risus nec, faucibus viverra enim. Quisque ultrices ante at cursus dignissim. Duis rhoncus dolor massa, nec imperdiet nibh tristique quis. Nulla ac orci eu lectus ullamcorper lobortis. Morbi eu urna tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec rhoncus ipsum ut erat finibus cursus.
+
+Aliquam facilisis nunc orci, a faucibus ex elementum at. Mauris sit amet vulputate nisl, a malesuada turpis. Donec efficitur dui sed nisl feugiat, porttitor viverra nunc semper. Vestibulum interdum tellus vel tincidunt posuere. Morbi elementum tincidunt purus, sit amet sodales risus euismod ut. Nullam varius metus ligula, vel feugiat justo ullamcorper quis. Curabitur blandit nibh vel eleifend bibendum. Integer posuere lectus et est condimentum dapibus. Nunc tristique tortor id tempus consectetur. Sed at lorem sagittis, consectetur velit quis, pellentesque diam. Fusce lobortis nisi quis velit faucibus, ut ornare arcu vehicula. Integer vel metus rhoncus, tempor purus mollis, vestibulum dui. Donec sodales blandit urna, eget vulputate sapien semper non. Mauris vitae tellus dignissim, feugiat velit at, hendrerit augue.
+
+Donec aliquam felis vel ante aliquam fermentum. Maecenas quis leo eget justo ornare ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla interdum rutrum ex at rhoncus. Nulla quam nunc, luctus at sem nec, mattis ullamcorper libero. In fringilla elementum magna id dictum. Ut non molestie tortor, a pretium risus. Maecenas ut maximus diam. Nunc ullamcorper laoreet diam, sed semper odio faucibus id. Phasellus tortor ex, auctor et mauris sed, tincidunt dictum purus. Etiam semper neque purus, ut suscipit arcu ultricies eget. In cursus purus nulla, sed tristique neque tempus eget. Donec malesuada ipsum at condimentum mollis. Aenean volutpat quam eros, eget malesuada eros fringilla at.
+
+Pellentesque scelerisque velit eget purus sagittis ultricies. Praesent feugiat lacinia lectus, id laoreet sem posuere a. Nam rutrum, tellus vitae condimentum condimentum, tortor dolor placerat nunc, sed tempus sem felis et nulla. Proin vitae urna imperdiet, ultricies orci a, mattis purus. Duis tristique arcu vel diam suscipit, ut ornare libero sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus viverra interdum justo, nec tristique ante efficitur in. Cras et lacus convallis, rutrum felis ut, tristique quam. Sed dapibus convallis sagittis. Fusce nec libero gravida, finibus ante ac, condimentum dolor. Nulla sed nisi sit amet purus scelerisque finibus vitae eu sapien.
+        </p>
+        
+        <footer>
+        <article class="footer">
+        <p>Briana E. Cowles</p>
+        <p>(215)206-1661</p>
+        <p>bec8616@g.rit.edu</p>
+        </article>
+        </footer>
+
+    </body>
+</html>
