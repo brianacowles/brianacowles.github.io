@@ -3,7 +3,7 @@
 //Changes color on scroll and adds border
 function changeCss () {
       var bodyElement = document.querySelector(".menu");
-      this.scrollY > 300 ? bodyElement.style.background = "#c5afe8" : bodyElement.style.background = "whitesmoke";
+      this.scrollY > 300 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
       this.scrollY > 300 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
     }
 window.addEventListener("scroll", changeCss , false);
@@ -23,6 +23,7 @@ $(document).ready(function () {
     <head>
         <link rel="stylesheet" type="text/css" href="personal%20website.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
         <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
         <title>Briana E. Cowles</title>
         <html lang="en">
@@ -31,7 +32,7 @@ $(document).ready(function () {
         <header></header>
         
         <div class="menu">
-            <li style="float:left"> <a href="home.html">HOME</a></li>
+            <li style="float:left"> <a href="index.html">HOME</a></li>
             <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/briana-cowles-b437a4138"><i style="font-size: 1.25em;" class="fab fa-linkedin-in"></i></a></li>
@@ -62,6 +63,7 @@ Pellentesque scelerisque velit eget purus sagittis ultricies. Praesent feugiat l
         
         <footer>
         <article class="footer">
+        <img class="portrait" alt="my portrait" src="media/portrait.jpg">
         <p>Briana E. Cowles</p>
         <p>(215)206-1661</p>
         <p>bec8616@g.rit.edu</p>

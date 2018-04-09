@@ -50,7 +50,8 @@ margin: 0;
 
 
 .menu li a:hover {
-    background-color: lavender;
+    background-color: black;
+    color: white;
     -webkit-transition: background-color 300ms linear;
     -moz-transition: background-color 300ms linear;
     -o-transition: background-color 300ms linear;
@@ -86,16 +87,21 @@ margin: 0;
 }
 
 p {
-    color: whitesmoke;
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
-.footer p {
-    color:black;
-}
+
 .footer {
     padding: 3%;
     text-align: right;
     float: right;
     background-color: lavender;
     width: 100%;
+}
+
+.footer img {
+    width: 10%;
+    display: inline;
+    float: right;
 }
