@@ -3,8 +3,8 @@
 //Changes color on scroll and adds border
 function changeCss () {
       var bodyElement = document.querySelector(".menu");
-      this.scrollY > 300 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
-      this.scrollY > 300 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
+      this.scrollY > 20 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
+      this.scrollY > 20 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
     }
 window.addEventListener("scroll", changeCss , false);
 
@@ -17,11 +17,15 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function() {
+  $(".search input, .search button").css("height", $(".legs").height());
+});
 </script>
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="personal%20website.css">
+        <link rel="stylesheet" type="text/css" href="tabs.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
         <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
@@ -41,18 +45,32 @@ $(document).ready(function () {
             <li><a href="downloads.html">DOWNLOADS</a></li>
         </div>
         
+        <div class="search">
+            <form action="searchresults.php">
+                <input type="text" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <p>This page is a collection of all of my projects including papers, programs, art, and more. Most programs are available for download under the download tab, and their documentation can be found here.</p>
+            <p>Use the search bar above to browse projects by category or find a specific title.</p>
+        </div>
         
-        <div>
-        
+        <div class="articles">
+            <article>
+                <img class="veganarticle" alt="click to read my critical article on veganism" src="media/vegan.jpg">
+                <img class="wordcounter" alt="click to view documentation on my wordcounter" src="media/wordcounter.png">
+                <a href="https://people.rit.edu/~bec8616/igme110/fall2017project/"><img class="women" alt="click to go to my website on women in gaming" src="media/women.jpg"></a>
+                <a href="https://letssavethenet.tumblr.com/tagged/a/chrono"><img class="net" alt="click to read my tumblr blog on net neutrality" src="media/net.jpg"></a>
+            </article>
         </div>
         
         
         <footer>
-        <article class="footer">
-        <p>Briana E. Cowles</p>
-        <p>(215)206-1661</p>
-        <p>bec8616@g.rit.edu</p>
-        </article>
+            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
+            <div class="info">
+            <p>Briana E. Cowles</p>
+            <p>(215)206-1661</p>
+            <p>bec8616@g.rit.edu</p>
+            </div>
         </footer>
 
     </body>
