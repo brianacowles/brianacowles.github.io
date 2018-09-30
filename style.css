@@ -117,31 +117,38 @@ p {
 }
 
 /*quick articles*/
+
+.quicklinks a{
+    text-decoration: none;
+    color: black;
+}
+
 .quicklinks {
     margin: 5%;
-    width: 90%;
-    align-content: center;
-    
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.quicklinks #text {
-    height: 100px;
-    width: auto;
-    
-}
 
 .quicklinks article {
-    width: 25%;
     height: auto;
     display: inline-block;
     border: solid black;
-    margin-bottom: 0 auto;
     margin: 1%;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
 }
 
 .quicklinks img {
     width: 100%;
     align-content: center;
+    
+}
+
+.quicklinks article:hover {
+    opacity: 0.5;
 }
 
 .quicklinks p, h3 {
