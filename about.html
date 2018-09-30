@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<script>
+//Changes color on scroll and adds border
+function changeCss () {
+      var bodyElement = document.querySelector(".menu");
+      this.scrollY > 20 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
+      this.scrollY > 20 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
+    }
+window.addEventListener("scroll", changeCss , false);
+
+function closeV() {
+    
+    document.getElementById("V").click();
+}
+
+function closeW() {
+    
+    document.getElementById("W").click();
+}
+    
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 100) {
+            $(".menu").addClass("scrolled");
+        } else {
+            $(".menu").removeClass("scrolled");
+        }
+    });
+});
+
+$(document).ready(function() {
+  $(".search input, .search button").css("height", $(".legs").height());
+});
+
+
+</script>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="tabs.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+        <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+        <title>Briana E. Cowles</title>
+        <html lang="en">
+    </head>
+        <div class="menu">
+            <li style="float:left"> <a href="index.html">HOME</a></li>
+            <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/brianacowles"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/briana-cowles-b437a4138"><i style="font-size: 1.25em;" class="fab fa-linkedin-in"></i></a></li>
+            <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="downloads.html">DOWNLOADS</a></li>
+        </div>
+    <body>
+        </body>
+        

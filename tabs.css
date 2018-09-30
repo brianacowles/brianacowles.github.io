@@ -127,7 +127,7 @@ code {
     margin-top: 100px;
     position: fixed;
     background-color: lavender;
-    height: 300px;
+    height: 30%;
     width: 20%;
     padding: 25px;
 }
@@ -250,6 +250,26 @@ a.popup{
     padding: 11px 3px;       
 }
 
+.links button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.links article {
+    float: right;
+    margin-top: 10%;
+    width: 60%;
+}
+
+.links input {
+    padding: 1%;
+}
 
 /*footer style*/
 footer {
