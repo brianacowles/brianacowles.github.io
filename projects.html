@@ -17,6 +17,10 @@ function closeW() {
     
     document.getElementById("W").click();
 }
+
+function sendAlert() {
+    alert("Sorry! This function is currently unavailable as ")
+}
     
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -58,10 +62,18 @@ $(document).ready(function() {
         </div>
         
         <div class="search">
-            <form action="searchresults.php">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            <script class>
+            (function() {
+                var cx = '016443071994768175079:g_opvv27tgu';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+            </script>
+            <gcse:search></gcse:search>
             <p>This page is a collection of all of my projects (both completed and in progress) including papers, programs, art, and more. Most programs are available for download under the download tab, and their documentation can be found here.</p>
             <p>Use the search bar above to browse projects by category or find a specific title.</p>
         </div>
@@ -69,7 +81,22 @@ $(document).ready(function() {
         <div class="articles">
         <article>
                    
-        
+        <details>
+            <summary id="W"><img class="project" alt="click to view documentation on my wordcounter" src="media/wordcounter.png"></summary>
+            <div class="popup">
+            <button onclick="closeW()">X</button>
+            <div class="content">
+            <p>In high school, one of my English teachers issued a mandatory word count for our papers; however, there were some restrictions. Words three letters or less, in quotes, or in parentheses did not count towards the total. If I wanted to know how long my paper was, I would have to count it out by hand. Through the VJM Wordcounter, I've alleviated this problem. </p>
+            
+            <p>This program works on a simple algorithm that splits words into lists while traversing user input. First, the input is split on the double quote character (") using the <code>.Split()</code> method. By the nature of this method we now have a list where every other element has words that are canidates for the total. If the first item in the list is an empty character, it follows that the third item in the list will be the first nonquoted character. This is due to how the <code>Split</code> method functions. If the first item in the list is not in quotes, then we can proceed as normal and add each even item to a new list. When we convert the new list to a string we can follow the same logic after splitting on parentheses.</p>
+
+            <p>Finally, we have a complete list of candidates. Now I iterate through each word in the list and check if it is greater than three characters. If it is, then I increment a count and, once the end of the list is reached, display it to the user.</p>
+                
+            <p>The following is a flowchart for this program:</p>
+            <img class="flowchart" alt="a flowchart for the logic of the wordcounter" src="media/wordflow.png">
+            </div>
+            </div>
+        </details>
     
         <details>
             <summary id="V"><img class="project" alt="click to read my critical article on veganism" src="media/vegan.png"></summary>
@@ -117,22 +144,7 @@ $(document).ready(function() {
             </div>
             
         </details>
-        <details>
-            <summary id="W"><img class="project" alt="click to view documentation on my wordcounter" src="media/wordcounter.png"></summary>
-            <div class="popup">
-            <button onclick="closeW()">X</button>
-            <div class="content">
-            <p>In high school, one of my English teachers issued a mandatory word count for our papers; however, there were some restrictions. Words three letters or less, in quotes, or in parentheses did not count towards the total. If I wanted to know how long my paper was, I would have to count it out by hand. Through the VJM Wordcounter, I've alleviated this problem. </p>
-            
-            <p>This program works on a simple algorithm that splits words into lists while traversing user input. First, the input is split on the double quote character (") using the <code>.Split()</code> method. By the nature of this method we now have a list where every other element has words that are canidates for the total. If the first item in the list is an empty character, it follows that the third item in the list will be the first nonquoted character. This is due to how the <code>Split</code> method functions. If the first item in the list is not in quotes, then we can proceed as normal and add each even item to a new list. When we convert the new list to a string we can follow the same logic after splitting on parentheses.</p>
-
-            <p>Finally, we have a complete list of candidates. Now I iterate through each word in the list and check if it is greater than three characters. If it is, then I increment a count and, once the end of the list is reached, display it to the user.</p>
-                
-            <p>The following is a flowchart for this program:</p>
-            <img class="flowchart" alt="a flowchart for the logic of the wordcounter" src="media/wordflow.png">
-            </div>
-            </div>
-        </details>
+        
                 <a href="https://people.rit.edu/~bec8616/igme110/fall2017project/"><img class="project" alt="click to go to my website on women in gaming" src="media/women.png"></a>
                 <a href="https://letssavethenet.tumblr.com/tagged/a/chrono"><img class="project" alt="click to read my tumblr blog on net neutrality" src="media/net.jpg"></a>
         </article>

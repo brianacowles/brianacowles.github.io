@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <script>
+function Download(url) {
+    document.getElementById('my_iframe').src = "WordCounter.zip";
+};
+    
 //Changes color on scroll and adds border
 function changeCss () {
       var bodyElement = document.querySelector(".menu");
@@ -8,27 +12,7 @@ function changeCss () {
     }
 window.addEventListener("scroll", changeCss , false);
 
-function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
-}
-
-document.getElementById("wordcounter").addEventListener("click", function(){
-    // Generate download of hello.txt file with some content
-    var text = document.getElementById("text-val").value;
-    var filename = "WordCounter.zip";
-    
-    download(filename, text);
-}, false);
-    
+   
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
@@ -39,9 +23,9 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
-  $(".search input, .search button").css("height", $(".legs").height());
-});
+$(document).ready(function(){
+    alert('<%: TempData["This page is currently under construction!"]%>');
+  });
 
 
 </script>
@@ -52,6 +36,7 @@ $(document).ready(function() {
         <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
         <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
         <title>Briana E. Cowles</title>
         <html lang="en">
     </head>
@@ -66,17 +51,29 @@ $(document).ready(function() {
         </div>
     <body>
     <div class="search">
-            <form action="searchresults.php">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            <script>
+            (function() {
+                var cx = '016443071994768175079:g_opvv27tgu';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+            </script>
+            <gcse:search></gcse:search>
             <p>Here you can download programs and tools I have created, or find out how to get them on different platforms. You can read about the logic of these programs and why I created them in the Projects tab.</p>
             <p>Use the search bar above to browse projects by category or find a specific title.</p>
         </div>
         <div class="links">
         <article>
-        
-            <button id="wordcounter">VJM Wordcounter</button>
+            <a href="WordCounter.zip" download>VJM Wordcounter</a><a class="hover">Download</a>
+            <div class="compatible">
+            <i style="font-size: 1.25em;" class="fab fa-windows"></i>
+            <i style="font-size: 1.25em; color: lightgray;" class="fab fa-apple"></i>
+            <i style="font-size: 1.25em; color: lightgray;" class="fab fa-linux"></i>
+            </div>
         </article>
         </div>
     </body>

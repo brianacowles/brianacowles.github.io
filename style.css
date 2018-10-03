@@ -121,6 +121,7 @@ p {
 .quicklinks a{
     text-decoration: none;
     color: black;
+
 }
 
 .quicklinks {
@@ -130,8 +131,9 @@ p {
 }
 
 
+
 .quicklinks article {
-    height: auto;
+
     display: inline-block;
     border: solid black;
     margin: 1%;
@@ -168,11 +170,16 @@ footer {
     float: right;
     background-color: lavender;
     width: 100%;
+    border-top-style: solid;
 }
 
 .info {
     line-height: 5px;
-    margin: 30px;
+    padding: 1%;
+}
+
+.info p {
+    font-size: 144%;
 }
 
 .portrait {

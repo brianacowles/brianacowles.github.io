@@ -3,6 +3,8 @@
   100%  {opacity: 1;}
 }
 
+
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -127,34 +129,11 @@ code {
     margin-top: 100px;
     position: fixed;
     background-color: lavender;
-    height: 30%;
+    min-height: 30%;
     width: 20%;
     padding: 25px;
 }
 
-.search input[type=text] {
-    padding: 6px;
-    padding-right: none;
-
-    border: black solid;
-    
-    margin-top: 3%;
-    font-size: 1em;
-    
-    height: 6.3%;
-    width: 60%;
-}
-
-.search button {
-    float: right;
-    margin-top: 3%;
-    background: #ddd;1
-    font-size: 17px;
-    border: black solid;
-    cursor: pointer;
-    padding: 7px;
-    width: 20%;
-}
 
 .search p {
     margin-top: 10%;
@@ -250,7 +229,13 @@ a.popup{
     padding: 11px 3px;       
 }
 
-.links button {
+.links article {
+    float: right;
+    margin-top: 10%;
+    width: 60%;
+}
+
+.links article a {
     background-color: white;
     border: none;
     color: black;
@@ -258,17 +243,60 @@ a.popup{
     text-align: center;
     text-decoration: none;
     font-size: 24px;
-    cursor: pointer;
+    padding: 2%;
+    font-family: 'Nunito', sans-serif;
+}
+.links article .hover {
+    display: none;
+}
+.links article:hover .hover {
+    display: inline;
+    background-color: black;
+    color: white;
+    -webkit-animation: sweep 700ms;
+    -moz-animation: sweep 700ms;
+    -ms-animation: sweep 700ms;
+    -o-animation: sweep 700ms;
+    animation: sweep 700ms;
 }
 
-.links article {
-    float: right;
-    margin-top: 10%;
-    width: 60%;
+.links article .compatible {
+    padding-top: 3%;
+    padding-left: 0.8%;
 }
 
-.links input {
+.links article i {
+    padding-right: 1%;
+}
+
+.resume {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.resume h1 {
+    font-family: 'Nunito', sans-serif;
     padding: 1%;
+}
+
+.resume p, h2 {
+    margin-left: 2%;
+}
+
+.resume li {
+    margin-left: 4%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.resume hr {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.resume h2 {
+    font-family: 'Nunito', sans-serif;
 }
 
 /*footer style*/
