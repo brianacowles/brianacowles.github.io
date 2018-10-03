@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>
 function Download(url) {
-    document.getElementById('my_iframe').src = "WordCounter.zip";
+    document.getElementById('my_iframe').src = "VJMWordCounter.zip";
 };
     
 //Changes color on scroll and adds border
@@ -12,7 +12,10 @@ function changeCss () {
     }
 window.addEventListener("scroll", changeCss , false);
 
-   
+function info() {
+    alert("This page is under construction!")
+}
+    
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
@@ -23,9 +26,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
-    alert('<%: TempData["This page is currently under construction!"]%>');
-  });
+
 
 
 </script>
@@ -36,7 +37,6 @@ $(document).ready(function(){
         <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
         <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
         <title>Briana E. Cowles</title>
         <html lang="en">
     </head>
@@ -49,7 +49,7 @@ $(document).ready(function(){
             <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="downloads.html">DOWNLOADS</a></li>
         </div>
-    <body>
+    <body onload="info()">
     <div class="search">
             <script>
             (function() {
@@ -76,5 +76,15 @@ $(document).ready(function(){
             </div>
         </article>
         </div>
+    <footer>
+            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
+            
+            <div class="info">
+                <p>Briana E. Cowles</p>
+                <p>(215)206-1661</p>
+                <p>bec8616@g.rit.edu</p>
+            </div>
+            
+        </footer>
     </body>
         

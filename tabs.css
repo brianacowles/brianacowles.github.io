@@ -263,11 +263,14 @@ a.popup{
 .links article .compatible {
     padding-top: 3%;
     padding-left: 0.8%;
+    height: 90%;
 }
 
 .links article i {
     padding-right: 1%;
 }
+
+
 
 .resume {
     width: 80%;
