@@ -306,11 +306,16 @@ footer {
     float: right;
     background-color: lavender;
     width: 100%;
+    border-top-style: solid;
 }
 
 .info {
     line-height: 5px;
-    margin: 30px;
+    padding: 1%;
+}
+
+.info p {
+    font-size: 144%;
 }
 
 .portrait {
