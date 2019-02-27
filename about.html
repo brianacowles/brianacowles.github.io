@@ -17,22 +17,6 @@ function closeW() {
     
     document.getElementById("W").click();
 }
-    
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 100) {
-            $(".menu").addClass("scrolled");
-        } else {
-            $(".menu").removeClass("scrolled");
-        }
-    });
-});
-
-$(document).ready(function() {
-  $(".search input, .search button").css("height", $(".legs").height());
-});
-
-
 </script>
 
 <html>
@@ -44,7 +28,7 @@ $(document).ready(function() {
         <title>Briana E. Cowles</title>
         <html lang="en">
     </head>
-        <div class="menu">
+        <div class="menu" id="topNav">
             <li style="float:left"> <a href="index.html">HOME</a></li>
             <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/brianacowles"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
@@ -52,8 +36,11 @@ $(document).ready(function() {
             <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="downloads.html">DOWNLOADS</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="collapsed()"><i class="fa fa-bars"></i></a>
         </div>
     <body>
+    <div class = "download"><a href="resume.pdf">Download a Copy of my Resume Here.</a></div>
+
     <div class="resume">
         <h1>Education</h1>
             <p>Rochester Institute of Technology	GPA: 3.82/4.00
@@ -103,15 +90,5 @@ $(document).ready(function() {
             <p>Gardening</p>
 
         </div>
-        <footer>
-            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
-            
-            <div class="info">
-                <p>Briana E. Cowles</p>
-                <p>(215)206-1661</p>
-                <p>bec8616@g.rit.edu</p>
-            </div>
-            
-        </footer>
         </body>
         

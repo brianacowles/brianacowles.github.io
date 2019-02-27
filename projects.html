@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <script>
-//Changes color on scroll and adds border
-function changeCss () {
-      var bodyElement = document.querySelector(".menu");
-      this.scrollY > 20 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
-      this.scrollY > 20 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
-    }
-window.addEventListener("scroll", changeCss , false);
 
 function closeV() {
     
@@ -22,16 +15,6 @@ function sendAlert() {
     alert("Sorry! This function is currently unavailable as ")
 }
     
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 100) {
-            $(".menu").addClass("scrolled");
-        } else {
-            $(".menu").removeClass("scrolled");
-        }
-    });
-});
-
 $(document).ready(function() {
   $(".search input, .search button").css("height", $(".legs").height());
 });
@@ -51,7 +34,7 @@ $(document).ready(function() {
     <body>
         <header></header>
         
-        <div class="menu">
+        <div class="menu" id="topNav">
             <li style="float:left"> <a href="index.html">HOME</a></li>
             <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/brianacowles"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
@@ -59,6 +42,7 @@ $(document).ready(function() {
             <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="downloads.html">DOWNLOADS</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="collapsed()"><i class="fa fa-bars"></i></a>
         </div>
         
         <div class="search">
@@ -149,17 +133,5 @@ $(document).ready(function() {
                 <a href="https://letssavethenet.tumblr.com/tagged/a/chrono"><img class="project" alt="click to read my tumblr blog on net neutrality" src="media/net.jpg"></a>
         </article>
         </div>
-        
-        <footer>
-            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
-            
-            <div class="info">
-                <p>Briana E. Cowles</p>
-                <p>(215)206-1661</p>
-                <p>bec8616@g.rit.edu</p>
-            </div>
-            
-        </footer>
-
     </body>
 </html>

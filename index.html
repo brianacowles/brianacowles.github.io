@@ -1,91 +1,58 @@
 <!DOCTYPE html>
 <script>
-//Changes color on scroll and adds border
-function changeCss () {
-      var bodyElement = document.querySelector(".menu");
-      this.scrollY > 300 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
-      this.scrollY > 300 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
-    }
-window.addEventListener("scroll", changeCss , false);
-
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 100) {
-            $(".menu").addClass("scrolled");
-        } else {
-            $(".menu").removeClass("scrolled");
-        }
-    });
-});
+function collapsed() {
+  var x = document.getElementById("topNav");
+  if (x.className === "menu") {
+    x.className += " responsive";
+  } else {
+    x.className = "menu";
+  }
+}    
 </script>
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">                                                                    
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>            
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">                   
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
         <link href="fontawesome-free-5.0.9/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                      
         <title>Briana E. Cowles</title>
         <html lang="en">
     </head>
     <body>
-        
-        <header></header>
-        
-        <div class="menu">
+        <div class="menu" id="topNav">
             <li style="float:left"> <a href="index.html">HOME</a></li>
+            <li><a></a></li>
             <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/brianacowles"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/briana-cowles-b437a4138"><i style="font-size: 1.25em;" class="fab fa-linkedin-in"></i></a></li>
-            <li style="padding-right: 0px"><a href="about">ABOUT</a></li>
-            <li><a href="projects">PROJECTS</a></li>
-            <li><a href="downloads">DOWNLOADS</a></li>
+            <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="downloads.html">DOWNLOADS</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="collapsed()"><i class="fa fa-bars"></i></a>
         </div>
         
-        <div class="parallax">        
-            <img class="logo" alt="Briana Cowles" src="media/logo.png">
-        </div>
-
-        <div class="quicklinks">
-            <a href="projects">
-                <article id="coderecent">
-                    <img class="veganarticle" alt="click to read about my word counting program" src="media/wordclip.png">
-                    <div id="text">
-                    <h3>Most Recent Program</h3>
-                    <p>Read about my wordcounting program</p>
-                    </div>
-                </article>
-            </a>
-            <a href="projects.html" id="V">
-                <article id="paperrecent">
-                    <img class="veganarticle" alt="click to read my critical article on veganism" src="media/veganclip.png">
-                    <div id="text">
-                    <h3>Most Recent Paper</h3>
-                    <p>Read my critical essay on veganism.</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://letssavethenet.tumblr.com/tagged/a/chrono">
-                <article id="featured">
-                    <img class="veganarticle" alt="click to read my net neutrality blog" src="media/netclip.jpg">
-                    <div id="text">
-                    <h3>Featured Project</h3>
-                    <p>Read my Net Neutrality blog</p>
-                    </div>
-                </article>
-            </a>
+        <div class="header">
+        <div class="title">
+            <h1>BRIANA COWLES</h1>
+            <h4><i>Aesthetics, function, and lines of code.</i></h4>
         </div>
         
-        <footer>
-            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
+        <div class="parallax">   
             
-            <div class="info">
-                <p>Briana E. Cowles</p>
-                <p>(215)206-1661</p>
-                <p>bec8616@g.rit.edu</p>
+        </div>
+        </div>
+        <div class="featured">
+            <h3>FEATURED</h3>
+            <div class="links">
+                <button onclick="window.location.href ='projects.html';"><b>Recent Project</b><p>Read about my wordcounting program.</p></button>
+                <button onclick="window.location.href ='projects.html';"><b>Recent Paper</b><p>Read my critical essay on veganism.</p></button>
+                <button onclick="window.location.href ='https://letssavethenet.tumblr.com/tagged/a/chrono';"> <b>Featured Project</b><p>Read my Net Neutrality blog</p></button>
             </div>
-            
-        </footer>
+        </div>
 
     </body>
 </html>

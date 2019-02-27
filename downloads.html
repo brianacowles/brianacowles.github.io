@@ -3,36 +3,19 @@
 function Download(url) {
     document.getElementById('my_iframe').src = "VJMWordCounter.zip";
 };
-    
-//Changes color on scroll and adds border
-function changeCss () {
-      var bodyElement = document.querySelector(".menu");
-      this.scrollY > 20 ? bodyElement.style.background = "lavender" : bodyElement.style.background = "whitesmoke";
-      this.scrollY > 20 ? bodyElement.style.borderBottom = "black solid" : bodyElement.style.border = "none";
-    }
-window.addEventListener("scroll", changeCss , false);
-
-function info() {
-    alert("This page is under construction!")
-}
-    
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 100) {
-            $(".menu").addClass("scrolled");
-        } else {
-            $(".menu").removeClass("scrolled");
-        }
-    });
-});
-
-
-
-
+function collapsed() {
+  var x = document.getElementById("topNav");
+  if (x.className === "menu") {
+    x.className += " responsive";
+  } else {
+    x.className = "menu";
+  }
+}    
 </script>
 
 <html>
     <head>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>            
         <link rel="stylesheet" type="text/css" href="tabs.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
@@ -40,7 +23,7 @@ $(document).ready(function () {
         <title>Briana E. Cowles</title>
         <html lang="en">
     </head>
-        <div class="menu">
+        <div class="menu" id="topNav">
             <li style="float:left"> <a href="index.html">HOME</a></li>
             <li><a href="https://twitter.com/somesuch90"><i style="font-size: 1.25em;" class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/brianacowles"><i style="font-size: 1.25em;" class="fab fa-github"></i></a></li>
@@ -48,6 +31,7 @@ $(document).ready(function () {
             <li style="padding-right: 0px"><a href="about.html">ABOUT</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="downloads.html">DOWNLOADS</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="collapsed()"><i class="fa fa-bars"></i></a>
         </div>
     <body onload="info()">
     <div class="search">
@@ -68,7 +52,7 @@ $(document).ready(function () {
         </div>
         <div class="links">
         <article>
-            <a href="WordCounter.zip" download>VJM Wordcounter</a><a class="hover">Download</a>
+            <a href="WordCounter.zip" download>VJM Wordcounter</a><a href="WordCounter.zip" download class="hover">Download</a>
             <div class="compatible">
             <i style="font-size: 1.25em;" class="fab fa-windows"></i>
             <i style="font-size: 1.25em; color: lightgray;" class="fab fa-apple"></i>
@@ -76,15 +60,6 @@ $(document).ready(function () {
             </div>
         </article>
         </div>
-    <footer>
-            <img class="portrait" alt="my portrait" src="media/portrait.jpg">
-            
-            <div class="info">
-                <p>Briana E. Cowles</p>
-                <p>(215)206-1661</p>
-                <p>bec8616@g.rit.edu</p>
-            </div>
-            
-        </footer>
+    
     </body>
         
