@@ -1,1 +1,5 @@
-# somesuch90.github.io
+# My Personal Website
+
+Nothing fancy here! Just a simple html page with a little info about me and some helpful links.
+
+Visit me at [brianacowles.com](brianacowles.com).

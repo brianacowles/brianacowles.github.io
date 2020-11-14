@@ -1,258 +1,44 @@
-/* Scrollbar */
-/* width */
-::-webkit-scrollbar {
-    width: 8px;    
-}
-/* track */
-::-webkit-scrollbar-track {
-    background: whitesmoke; 
-    border-radius: 10px;
-}
-/* handle */
-::-webkit-scrollbar-thumb {
-    background: black; 
-    border-radius: 10px;
-}
-.module {
-  width: 300px;
-  height: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300&display=swap');
 
-  overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
+:root {
+    --text: #0A1D1F;
+    --accent: #005D3E;
+    --accent2: #FFE999;
+    --bg: #F8F4F1;
+    --link: #915B3B;
 }
-/* Html and Body*/
+
 html {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: auto;
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: auto;
+    background-color: var(--bg);
 }
 
-/*Menu*/
-/* code for menu responsiveness on small screens */
-@media screen and (max-width: 600px) {
-    .menu  {
-        float: none;
-        display: block;
-        text-align: right;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-    } 
-}
-@media screen and (max-width: 600px) {
-  .menu li:not(:first-child) {display: none;}
-  .menu a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-    .menu.responsive {
-        position: absolute;
-    }
-    .menu.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: white;
-    }
-  .menu.responsive li {
-    float: none;
-    display: block;
-    text-align: right;
-    right: 0;
-  }
-}
-/* menu design */
-.menu {
-    list-style-type: none;
-    margin: auto 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    background-color:black;
-
-    border-left: 0px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99 !important; 
-    
-}
-.menu .icon {
-    display: none;
-}
-.menu li {
-    float: right;
-    padding-right: 1%;
-}
-.menu a {
-    display: block;
-    color: white;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
-}
-/*change color on hover */
-.menu li a:hover {
-    background-color: white;
-    color: black;
-    -webkit-transition: background-color 300ms linear;
-    -moz-transition: background-color 300ms linear;
-    -o-transition: background-color 300ms linear;
-    -ms-transition: background-color 300ms linear;
-    transition: background-color 300ms linear;
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--accent);
+    margin-bottom: -0.8%;
 }
 
-/*Parallax image */
-* {
-    box-sizing: border-box;
-}
-.parallax { 
-    /* The image used */
-    background-image: url("media/headerImage.jpg");
-
-    /* Height */
-    height: 90%;
-    width: 40%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    /* Position */
-    float: right;
-    margin-right: 2%;
-    !top: 0;
-}
-@media (max-width:629px) {
-    .parallax {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-    }
-}
-
-/* Name Header */
-.title {
-    width: 50%;
-    position: relative;
-    float:left;
-    padding-left: 5%;
-    border: 3px solid black;
-    margin-top: 7%;
-    padding: 5%;
-    
-}
-.title h1 {
-    font-size:7vw;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0%;
-}
-.title h4 {
-    font-size: 2vw;
-    font-family: 'Didact Gothic', sans-serif;
-    margin: 0%;
-}
-@media (max-width:629px) {
-    .title {
-        position: relative;
-        width: 100%;
-        border: none;
-        
-    }
-    .title h1 {
-        padding-top: 10%;
-        font-size: 20vw;
-        text-align: center;
-    }
-    .title h4 {
-        font-size: 10vw;   
-        text-align: center;
-    }
-}
-
-
-/* Featured section */
-.featured {
-    display: inline-block;
-    width: 100%;
-    left: 50%;
-    background-color: white;
-}
-/* title */
-.featured h3 {
-    padding: 1%;
-    font-size: 300%;
-    font-family: 'Josefin Sans', sans-serif;
-    color: white;
-    display: block;
-    text-align: center;
-    background-color: black;
-
-}
-/* quicklinks */
-
-.links {
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.links button p {
-    color: black;
-    padding: 2%;
-    width: 100%;
-    height: 100%;
-}
-
-.header {
-    height: 100%;
-}
-
-.links .buttonblock {
-    
-    padding-top: 2%;
-    width: 20%;
-    margin: 4%;
-}
-.links .buttonblock button {
-    font-family: 'Nunito', sans-serif;
-    background-color: #ffffff;
-    color: black;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-        border: 2px solid black;
-    padding: 4%;
-        cursor: pointer;
-    
-
-
-}
-@media (max-width:629px) {
-    .featured  {
-        display: none;
-    }
-    
-}
-
-/* body text */
 p {
-    color: black;
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text);
+    font-size: 0.9em;
+}
+
+a {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--link);
+    margin-right: 2%;
+}
+
+a:hover {
+    background-color: var(--accent2);
+}
+
+#display-box {
+    border: 0.13em dashed var(--accent);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 3%;
+    padding: 1.5%;
+    width: 40%;
 }
